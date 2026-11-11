@@ -1,0 +1,31 @@
+busy cores before: 0.18
+busy cores after: 0.11
+# --- P4 benchmark wait 2026-11-10T12:08:27Z
+2026-11-10T12:08:48Z host_busy_cores=1.19 wsl_load1=10.97
+2026-11-10T12:09:51Z host_busy_cores=2.13 wsl_load1=7.77
+2026-11-10T12:10:55Z host_busy_cores=2.22 wsl_load1=5.13
+2026-11-10T12:11:58Z host_busy_cores=1.13 wsl_load1=5.63
+2026-11-10T12:13:00Z host_busy_cores=1.24 wsl_load1=4.14
+2026-11-10T12:14:03Z host_busy_cores=1.13 wsl_load1=4.53
+2026-11-10T12:15:07Z host_busy_cores=0.14 wsl_load1=8.92
+2026-11-10T12:16:11Z host_busy_cores=0.11 wsl_load1=9.70
+2026-11-10T12:17:15Z host_busy_cores=0.21 wsl_load1=11.66
+2026-11-10T12:18:18Z host_busy_cores=0.2 wsl_load1=11.77
+2026-11-10T12:19:21Z host_busy_cores=0.16 wsl_load1=11.09
+2026-11-10T12:20:25Z host_busy_cores=0.25 wsl_load1=12.34
+2026-11-10T12:21:28Z host_busy_cores=0.12 wsl_load1=8.47
+2026-11-10T12:22:30Z host_busy_cores=0.11 wsl_load1=6.04
+2026-11-10T12:23:33Z host_busy_cores=0.16 wsl_load1=3.67
+2026-11-10T12:24:35Z host_busy_cores=0.11 wsl_load1=2.84
+2026-11-10T12:25:38Z host_busy_cores=0.1 wsl_load1=4.21
+2026-11-10T12:26:41Z host_busy_cores=0.1 wsl_load1=5.93
+2026-11-10T12:27:45Z host_busy_cores=0.15 wsl_load1=2.80
+2026-11-10T12:28:49Z host_busy_cores=0.16 wsl_load1=1.75
+2026-11-10T12:29:53Z host_busy_cores=0.1 wsl_load1=0.67
+2026-11-10T12:30:57Z host_busy_cores=0.13 wsl_load1=0.24
+2026-11-10T12:31:22Z before wsl run host_busy=0.45
+2026-11-10T12:33:39Z after wsl run host_busy=0.12
+2026-11-10T12:34:00Z before win_pcore_lp10 host_busy=0.22
+2026-11-10T12:36:10Z after win_pcore_lp10 host_busy=0.13
+2026-11-10T12:36:16Z before win_ecore_lp4 host_busy=0.18
+2026-11-10T12:39:57Z after win_ecore_lp4 host_busy=0.1

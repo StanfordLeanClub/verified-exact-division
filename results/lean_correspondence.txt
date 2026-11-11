@@ -1,0 +1,11 @@
+Lean <-> C / hardware correspondence (2026-11-10), replay: src/difftest/ (see REPLAY.md)
+
+1. Verified checker `accept` (lean/ExactFDiv/Checker.lean, evaluated by the Lean interpreter) vs the C check
+   (`efd64_bad_significand` / `efd32_bad_significand` in native/exact_fdiv.h, gcc 15.2 -O2 -mfma, hardware fma):
+     binary64: 3000 odd significands (seed 20261110, incl. the rejected witness 0x1ee635506bf2ef), C accepts 2927, Lean accepts 2927, disagreements 0
+     binary32: 3000 odd significands (incl. 0x9f0237), C accepts 2918, Lean accepts 2918, disagreements 0
+   also: Lean rejects exactly Y = 251 at p = 8 and Y = 439, 507 at p = 9 (= brute force, results/checker_vs_bruteforce.json)
+
+2. Model rounding `div (rneR 53 (-1074) 971)` on the exact quotient vs CPython float division (hardware, x86-64 SSE2):
+     4000 pairs of random binary64 operands (seed 7): 2400 finite results (551 subnormal), 646 total underflows to a
+     signed zero, 954 overflows to a signed infinity; disagreements 0 (values, zero signs and infinity signs compared)

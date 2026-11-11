@@ -1,0 +1,4 @@
+n=1024     int32->double /1000.0: div 1.132 ns/elt, mul+fma 0.222 ns/elt, speedup 5.10x | uint8->float /255.0f: div 0.353, mul+fma 0.161, speedup 2.19x   (medians of 15; outputs bit-identical)
+n=16384    int32->double /1000.0: div 1.152 ns/elt, mul+fma 0.326 ns/elt, speedup 3.53x | uint8->float /255.0f: div 0.356, mul+fma 0.162, speedup 2.20x   (medians of 15; outputs bit-identical)
+n=262144   int32->double /1000.0: div 1.142 ns/elt, mul+fma 0.571 ns/elt, speedup 2.00x | uint8->float /255.0f: div 0.354, mul+fma 0.155, speedup 2.28x   (medians of 15; outputs bit-identical)
+n=4194304  int32->double /1000.0: div 0.870 ns/elt, mul+fma 0.836 ns/elt, speedup 1.04x | uint8->float /255.0f: div 0.324, mul+fma 0.338, speedup 0.96x   (medians of 15; outputs bit-identical)

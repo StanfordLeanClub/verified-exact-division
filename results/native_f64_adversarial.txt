@@ -1,0 +1,17 @@
+# test_f64 full run
+# date: Tue Nov 10 09:46:54 UTC 2026  gcc: gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+# build: gcc -O2 -mavx2 -mfma -ffp-contract=off -fopenmp test_f64.c -o test_f64 -lm
+# cmd: ./test_f64 20000 1
+per-family comparisons / mismatches:
+  a_random_bits          1314848768  0
+  b_thresholds              8667216  0
+  c_near_midpoint         821186560  0
+  d_candidates             31352850  0
+  e_quotient_edges         47679526  0
+  f_specials                2006300  0
+mode histogram per divisor category:
+  structured(+-)         n=126    DIV=26 (20.635%) EXACT=24 (19.048%) FMA=76 (60.317%) | same_sign among FMA=38 (50.000%) | rejected by significand=0 (0.000% of all, 0.000% of odd-significand normal y; odd=40)
+  random-bits            n=20000  DIV=863 (4.315%) EXACT=0 (0.000%) FMA=19137 (95.685%) | same_sign among FMA=9574 (50.029%) | rejected by significand=254 (1.270% of all, 2.553% of odd-significand normal y; odd=9948)
+  random-sig-exp-near-0  n=20000  DIV=284 (1.420%) EXACT=0 (0.000%) FMA=19716 (98.580%) | same_sign among FMA=9923 (50.330%) | rejected by significand=284 (1.420% of all, 2.825% of odd-significand normal y; odd=10052)
+rejected-by-significand divisors: 538, raw kernel confirmed wrong on x=bad_sig: 538
+SUMMARY test_f64: divisors=40126 comparisons=2225741220 mismatches=0 rejections_confirmed=538/538 time=54.6s

@@ -1,0 +1,6 @@
+# Windows native build: clang 19.1.5 -O2 -mavx2 -mfma -ffp-contract=off -fopenmp test_kernels.c; cmd: test_kernels_win.exe 5 0 3 (part A only)
+part A f64: divisors=128 (DIV=28 EXACT=24 FMA=76) elements compared=2119004160 mismatches=0 canary=0
+part A f32: divisors=112 (DIV=26 EXACT=18 FMA=68) elements compared=1854128640 mismatches=0 canary=0
+part B f32 exhaustive: divisors=0 (FMA mode 0, of which same_sign 0), x patterns 2^32 x 5 runs each (P1, P2, P3, P4 permuted, P4 sequential), elements compared=0 mismatches=0
+NaN-bit differences (both NaN, bits differ; informational, not mismatches) f64/f32 per variant: div=0/0 P1=0/0 P2=0/0 P3=0/0 P3X=7270240/6051808 P4=2118982/1605886 default=2118982/1605886
+SUMMARY test_kernels: elements compared=3973132800 (A f64 2119004160, A f32 1854128640, B f32-exhaustive 0) mismatches=0 canary_violations=0

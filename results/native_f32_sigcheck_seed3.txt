@@ -1,0 +1,1 @@
+SUMMARY significand check: 30000 significands (1875 even), 693 rejected (2.310%), disagreements with exhaustive scan=0

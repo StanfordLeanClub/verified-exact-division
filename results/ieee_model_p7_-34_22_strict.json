@@ -1,0 +1,28 @@
+{
+ "p": 7,
+ "emin": -34,
+ "emax": 22,
+ "strict": true,
+ "stats": {
+  "y unsupported": 1529,
+  "y supported": 5898,
+  "x special": 29490,
+  "x fast": 34170464,
+  "x fallback-high": 3049216,
+  "x fallback": 6555276
+ },
+ "mismatches": 0,
+ "raw_on_guarded_lanes": {
+  "special | zl same sign | raw kernel right": 18562,
+  "special | zl same sign | raw kernel WRONG": 228,
+  "fallback-high | zl same sign | raw kernel right": 1868544,
+  "special | zl opposite sign | raw kernel right": 4280,
+  "special | zl opposite sign | raw kernel WRONG": 6420,
+  "fallback-high | zl opposite sign | raw kernel right": 45916,
+  "fallback-high | zl opposite sign | raw kernel WRONG": 1134756,
+  "fallback | zl same sign | raw kernel right": 4030988,
+  "fallback | zl opposite sign | raw kernel right": 2284024,
+  "fallback | zl opposite sign | raw kernel WRONG": 109172,
+  "fallback | zl same sign | raw kernel WRONG": 131092
+ }
+}

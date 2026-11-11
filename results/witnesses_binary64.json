@@ -1,0 +1,72 @@
+[
+ {
+  "kind": "tiny x (below tlo): raw kernel != x/y",
+  "y": 10.0,
+  "tlo": "0x1.0000000000000p-964",
+  "x": "0x0.0000000003f39p-1022",
+  "raw": "0x0.0000000000653p-1022",
+  "div": "0x0.0000000000652p-1022",
+  "same_sign": false
+ },
+ {
+  "kind": "tiny x (below tlo): raw kernel != x/y",
+  "y": 3.0,
+  "tlo": "0x1.0000000000000p-966",
+  "x": "0x1.abe96e4b06ce6p-1021",
+  "raw": "0x1.1d46498759deep-1022",
+  "div": "0x1.1d46498759defp-1022",
+  "same_sign": true
+ },
+ {
+  "kind": "tiny x (below tlo): raw kernel != x/y",
+  "y": 255.0,
+  "tlo": "0x1.0000000000000p-958",
+  "x": "0x1.1a207cc667e97p-1017",
+  "raw": "0x0.2367770fdcda0p-1022",
+  "div": "0x0.2367770fdcda1p-1022",
+  "same_sign": true
+ },
+ {
+  "kind": "tiny x (below tlo): raw kernel != x/y",
+  "y": 0.1,
+  "tlo": "0x1.0000000000000p-971",
+  "x": "0x0.a8ea3291e952ap-1022",
+  "raw": "0x1.a6497e6cc74e8p-1020",
+  "div": "0x1.a6497e6cc74e9p-1020",
+  "same_sign": false
+ },
+ {
+  "kind": "special value, zl opposite sign",
+  "y": 10.0,
+  "x": "-0.0",
+  "raw": "0.0",
+  "div": "-0.0",
+  "zh": "0x1.999999999999ap-4",
+  "zl": "-0x1.999999999999ap-58"
+ },
+ {
+  "kind": "special value, zl opposite sign",
+  "y": 10.0,
+  "x": "inf",
+  "raw": "nan",
+  "div": "inf",
+  "zh": "0x1.999999999999ap-4",
+  "zl": "-0x1.999999999999ap-58"
+ },
+ {
+  "kind": "x*zl overflows (x >= thi), zl opposite sign",
+  "y": "0x1.4000000000000p-997",
+  "x": "0x1.0000000000000p+1000",
+  "thi": "0x1.0000000000000p+81",
+  "zl": "-0x1.999999999999ap+942",
+  "raw": "-inf",
+  "div": "inf"
+ },
+ {
+  "kind": "significand check rejects",
+  "y": "0x1.ee635506bf2efp+52",
+  "x": "0x1.4540e56da1dacp+52",
+  "raw": "0x1.50d71be07be08p-1",
+  "div": "0x1.50d71be07be07p-1"
+ }
+]

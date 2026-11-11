@@ -1,0 +1,73 @@
+# test_kernels full run, final efd_kernels.h (shift guard, guard-before-arithmetic, out-of-line slow path, default P2)
+# date: Tue Nov 10 11:17:31 UTC 2026  gcc: gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+# sha256 cc09817b9b8c00b588057d1102f1278623d4bb5e875d71c74e6e3bd9d75c40cb  efd_kernels.h
+# sha256 744c5766188ceccc511001d5fcbeab2f96ac9c83fdcb29f0550bac3385e95298  exact_fdiv.h
+# build: gcc -O2 -mavx2 -mfma -ffp-contract=off -fopenmp test_kernels.c -o test_kernels -lm
+# cmd: ./test_kernels 200 40 1
+part A f64: divisors=518 (DIV=40 EXACT=24 FMA=454) elements compared=3828279000 mismatches=0 canary=0
+part A f32: divisors=502 (DIV=51 EXACT=18 FMA=433) elements compared=3710031000 mismatches=0 canary=0
+exhaustive f32 y=3              (0x40400000) mode=2 same=0 tlo=1.57772e-30  thi=inf          mismatches=0
+exhaustive f32 y=-3             (0xc0400000) mode=2 same=0 tlo=1.57772e-30  thi=inf          mismatches=0
+exhaustive f32 y=10             (0x41200000) mode=2 same=0 tlo=1.26218e-29  thi=inf          mismatches=0
+exhaustive f32 y=255            (0x437f0000) mode=2 same=0 tlo=1.00974e-28  thi=inf          mismatches=0
+exhaustive f32 y=-255           (0xc37f0000) mode=2 same=0 tlo=1.00974e-28  thi=inf          mismatches=0
+exhaustive f32 y=1000           (0x447a0000) mode=2 same=0 tlo=4.03897e-28  thi=inf          mismatches=0
+exhaustive f32 y=0.100000001    (0x3dcccccd) mode=2 same=0 tlo=9.86076e-32  thi=inf          mismatches=0
+exhaustive f32 y=0.00100000005  (0x3a83126f) mode=2 same=1 tlo=1.54074e-33  thi=inf          mismatches=0
+exhaustive f32 y=3.14159274     (0x40490fdb) mode=2 same=1 tlo=3.15544e-30  thi=inf          mismatches=0
+exhaustive f32 y=1.73205078     (0x3fddb3d7) mode=0 same=0 tlo=0            thi=0            mismatches=0
+exhaustive f32 y=7              (0x40e00000) mode=2 same=0 tlo=3.15544e-30  thi=inf          mismatches=0
+exhaustive f32 y=49             (0x42440000) mode=2 same=1 tlo=5.04871e-29  thi=inf          mismatches=0
+exhaustive f32 y=360            (0x43b40000) mode=2 same=0 tlo=2.01948e-28  thi=inf          mismatches=0
+exhaustive f32 y=16777215       (0x4b7fffff) mode=2 same=0 tlo=6.61744e-24  thi=inf          mismatches=0
+exhaustive f32 y=8388609        (0x4b000001) mode=2 same=1 tlo=1.38778e-17  thi=inf          mismatches=0
+exhaustive f32 y=0.300000012    (0x3e99999a) mode=2 same=0 tlo=3.9443e-31   thi=inf          mismatches=0
+exhaustive f32 y=2              (0x40000000) mode=1 same=1 tlo=0            thi=inf          mismatches=0
+exhaustive f32 y=1.17549435e-38 (0x00800000) mode=1 same=1 tlo=0            thi=inf          mismatches=0
+exhaustive f32 y=3.00000001e+38 (0x7f61b1e6) mode=0 same=0 tlo=0            thi=0            mismatches=0
+exhaustive f32 y=-3.00000001e+38 (0xff61b1e6) mode=0 same=0 tlo=0            thi=0            mismatches=0
+exhaustive f32 y=1.19999998e-38 (0x0082ab1e) mode=2 same=1 tlo=1.4013e-45   thi=6.71089e+07  mismatches=0
+exhaustive f32 y=2.00000001e-38 (0x00d9c7dd) mode=2 same=1 tlo=1.4013e-45   thi=6.71089e+07  mismatches=0
+exhaustive f32 y=1.00000004e-36 (0x03aa2425) mode=2 same=1 tlo=1.4013e-45   thi=6.87195e+10  mismatches=0
+exhaustive f32 y=1e-30          (0x0da24260) mode=2 same=0 tlo=1.4013e-45   thi=9.0072e+15   mismatches=0
+exhaustive f32 y=1.00000002e+30 (0x7149f2ca) mode=0 same=0 tlo=0            thi=0            mismatches=0
+exhaustive f32 y=3.40282347e+38 (0x7f7fffff) mode=0 same=0 tlo=0            thi=0            mismatches=0
+exhaustive f32 y=1.17549435e-38 (0x00800000) mode=1 same=1 tlo=0            thi=inf          mismatches=0
+exhaustive f32 y=3.52648305e-38 (0x01400000) mode=2 same=0 tlo=1.4013e-45   thi=1.34218e+08  mismatches=0
+exhaustive f32 y=1.99999988     (0x3fffffff) mode=2 same=0 tlo=7.88861e-31  thi=inf          mismatches=0
+exhaustive f32 y=1.00000012     (0x3f800001) mode=2 same=1 tlo=1.65436e-24  thi=inf          mismatches=0
+exhaustive f32 y=9.80665016     (0x411ce80a) mode=2 same=1 tlo=2.52435e-29  thi=inf          mismatches=0
+exhaustive f32 y=6.28318548     (0x40c90fdb) mode=2 same=1 tlo=6.31089e-30  thi=inf          mismatches=0
+exhaustive f32 y=-2.54389381    (0xc022cf28) mode=2 same=0 tlo=3.15544e-30  thi=inf          mismatches=0
+exhaustive f32 y=8587703        (0x4b0309b7) mode=2 same=0 tlo=6.61744e-24  thi=inf          mismatches=0
+exhaustive f32 y=-2712.14941    (0xc5298264) mode=2 same=1 tlo=6.46235e-27  thi=inf          mismatches=0
+exhaustive f32 y=-1.66321899e+34 (0xf84d01f0) mode=0 same=0 tlo=0            thi=0            mismatches=0
+exhaustive f32 y=0.00253152545  (0x3b25e7f3) mode=2 same=1 tlo=3.08149e-33  thi=inf          mismatches=0
+exhaustive f32 y=-2.74354739e-16 (0xa59e279d) mode=2 same=0 tlo=1.4013e-45   thi=1.26765e+30  mismatches=0
+exhaustive f32 y=-8919.14258    (0xc60b5c92) mode=2 same=0 tlo=6.46235e-27  thi=inf          mismatches=0
+exhaustive f32 y=-0.00090119557 (0xba6c3e36) mode=2 same=0 tlo=7.70372e-34  thi=inf          mismatches=0
+part B f32 exhaustive: divisors=40 (FMA mode 31, of which same_sign 12), x patterns 2^32 x 3 policies each, elements compared=515396075520 mismatches=0
+SUMMARY test_kernels: elements compared=522934385520 (A f64 3828279000, A f32 3710031000, B f32-exhaustive 515396075520) mismatches=0 canary_violations=0
+	Command being timed: "./test_kernels 200 40 1"
+	User time (seconds): 10206.94
+	System time (seconds): 4.05
+	Percent of CPU this job got: 1302%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 13:04.01
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13560
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 8
+	Minor (reclaiming a frame) page faults: 363953
+	Voluntary context switches: 511
+	Involuntary context switches: 16381
+	Swaps: 0
+	File system inputs: 608
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,2 @@
+SUMMARY binary64: divisors=24030 fma_mode=23285 cases=14358727 value_mismatches=0 ovf_unf_inv_dbz_flag_diffs=0 inexact_only_diffs=1775 overflowed=321509 underflowed=0
+SUMMARY binary32: divisors=24030 fma_mode=21943 cases=13549204 value_mismatches=0 ovf_unf_inv_dbz_flag_diffs=0 inexact_only_diffs=1402 overflowed=714657 underflowed=0

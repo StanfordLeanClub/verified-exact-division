@@ -1,0 +1,19 @@
+format p=6 emin=-30 emax=20 strict=True: 3331 values
+  x fallback                       1289724
+  x fallback-high                  618368
+  x fast                           6912460
+  x special                        13260
+  y supported                      2652
+  y unsupported                    679
+  MISMATCHES guarded vs division: 0
+  unguarded kernel on guarded lanes: fallback | zl opposite sign | raw kernel WRONG               44756
+  unguarded kernel on guarded lanes: fallback | zl opposite sign | raw kernel right               828928
+  unguarded kernel on guarded lanes: fallback | zl same sign | raw kernel WRONG                   16412
+  unguarded kernel on guarded lanes: fallback | zl same sign | raw kernel right                   399628
+  unguarded kernel on guarded lanes: fallback-high | zl opposite sign | raw kernel WRONG          411708
+  unguarded kernel on guarded lanes: fallback-high | zl opposite sign | raw kernel right          12356
+  unguarded kernel on guarded lanes: fallback-high | zl same sign | raw kernel right              194304
+  unguarded kernel on guarded lanes: special | zl opposite sign | raw kernel WRONG                5196
+  unguarded kernel on guarded lanes: special | zl opposite sign | raw kernel right                3464
+  unguarded kernel on guarded lanes: special | zl same sign | raw kernel WRONG                    204
+  unguarded kernel on guarded lanes: special | zl same sign | raw kernel right                    4396
