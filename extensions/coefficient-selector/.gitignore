@@ -1,0 +1,6 @@
+.lake/
+*.olean
+*.ilean
+*.exe
+compiler_tmp/
+__pycache__/

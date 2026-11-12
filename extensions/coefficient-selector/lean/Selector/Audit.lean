@@ -1,0 +1,27 @@
+import Selector.Instances
+import Selector.Scaling
+
+#print axioms CoefficientSelector.error_bound
+#print axioms CoefficientSelector.stable_binade
+#print axioms CoefficientSelector.normalized_stable
+#print axioms CoefficientSelector.progression_complete
+#print axioms CoefficientSelector.candidates_complete
+#print axioms CoefficientSelector.check_sound
+#print axioms CoefficientSelector.check_float
+#print axioms CoefficientSelector.select_checked
+#print axioms CoefficientSelector.select_sound
+#print axioms CoefficientSelector.check_sound_scaled
+#print axioms CoefficientSelector.div3_checked
+#print axioms CoefficientSelector.div3_correct
+#print axioms CoefficientSelector.div3_selected
+#print axioms CoefficientSelector.div3_scaled_correct
+#print axioms CoefficientSelector.repair32a_correct
+#print axioms CoefficientSelector.repair32b_correct
+#print axioms CoefficientSelector.repair64_correct
+#print axioms CoefficientSelector.repair32a_selected
+#print axioms CoefficientSelector.repair32b_selected
+#print axioms CoefficientSelector.repair64_selected
+#print axioms CoefficientSelector.repair32a_original_fails
+#print axioms CoefficientSelector.repair32b_original_fails
+#print axioms CoefficientSelector.repair64_original_fails
+#print axioms CoefficientSelector.malformed_grid_rejected
