@@ -107,17 +107,125 @@
     {
       "path": "lean/Div3IEEE/Audit.lean",
       "sha256": "d0a1c1689d654f953408a95cb02f7a203e5904e19140ace850afa1de961ee5ac"
+    },
+    {
+      "path": "lean/Div3Machine/Memory.lean",
+      "sha256": "d35e285fa6bb7f90ca1d8af6575a0239befc1528934537890b531ee40f81bd52"
+    },
+    {
+      "path": "lean/Div3Machine/Operations.lean",
+      "sha256": "f117d0cec97d3117550144693b37564e96932b907e6eec9ed6d6e8a2704cdbf6"
+    },
+    {
+      "path": "lean/Div3Machine/Invariant.lean",
+      "sha256": "f4583961535c738c2843ae7446d4ec30d9a51cf5465718b7ef909fc6dbc128a8"
+    },
+    {
+      "path": "lean/Div3Machine/ISA.lean",
+      "sha256": "17b3865c35dc14b973803026fa7a68969e8ec271bde8b4de32c114c5cb46a7b0"
+    },
+    {
+      "path": "lean/Div3Machine/Decoder.lean",
+      "sha256": "29c290124117c49b539d6097e2d7065fa16b9d2076cb91031c3902def150cd70"
+    },
+    {
+      "path": "lean/Div3Machine/Program.lean",
+      "sha256": "8e13663fa5bac077c02f71c716a9b6f56165ff35cd5eba1c5ce3e01832d7f447"
+    },
+    {
+      "path": "lean/Div3Machine/Linear.lean",
+      "sha256": "5212328c453ea158ee62b6a092fdd47ac9e080719839f03b42b04c9f360a3076"
+    },
+    {
+      "path": "lean/Div3Machine/Arithmetic.lean",
+      "sha256": "c416002a04758d12756c48556fb3a4120ac3ea2b4ac33ba6fd679287a40beda9"
+    },
+    {
+      "path": "lean/Div3Machine/Blocks.lean",
+      "sha256": "4c545d52d9b26c6c5375de01e75fca488020752c8ff29741f988e88d0ae25b38"
+    },
+    {
+      "path": "lean/Div3Machine/Support.lean",
+      "sha256": "feea35daac19d120147c4bd13d706053b15e746a7bdeac3f06b6aadc799bb5ff"
+    },
+    {
+      "path": "lean/Div3Machine/Vector8.lean",
+      "sha256": "e4e06ffb5347ec667f4b636b0f816799d1d8f60e6b274fcc68002c78e33ffdf9"
+    },
+    {
+      "path": "lean/Div3Machine/Vector32.lean",
+      "sha256": "451621919da55a47396796882d52ee5015ef04aa169354c40a61fcbc3045be66"
+    },
+    {
+      "path": "lean/Div3Machine/Stores.lean",
+      "sha256": "5a9036fa4c48306d9a817c302be0fd13b3b9545090435c54858e8bdae3a3280d"
+    },
+    {
+      "path": "lean/Div3Machine/ChunkMemory.lean",
+      "sha256": "d7442a60844d374694d244d73a43f6119a434a39a39dec7078b0b62ea0db5d5b"
+    },
+    {
+      "path": "lean/Div3Machine/Scalar.lean",
+      "sha256": "cd88f50c59ed60787519ce790e9776aa71cb9cbc83fb48982498b1dc6f3d08f7"
+    },
+    {
+      "path": "lean/Div3Machine/Image.lean",
+      "sha256": "93f385d70d9ca32ea8a5dc7d84d346ab9eb8a3b8ea810d0f5b964e6725772dca"
+    },
+    {
+      "path": "lean/Div3Machine/Control.lean",
+      "sha256": "69840ed79471105afdb3ce768cfd6f7b311aea2f3e479224c068f81a59c5cc57"
+    },
+    {
+      "path": "lean/Div3Machine/Contract.lean",
+      "sha256": "7dc997c8256ea0662ceccdb568eaf0ef08240e07646426ce528698459ef8650e"
+    },
+    {
+      "path": "lean/Div3Machine/Counters.lean",
+      "sha256": "c1a3d975fbb8b7ef63530eceef85f859a08bc3d94ae5ee020f6dd472d4460de8"
+    },
+    {
+      "path": "lean/Div3Machine/Body8Kernel.lean",
+      "sha256": "09639f3f4ab69ccf83568485a548ebadb7ddbe1495060dc0f4aeba6c1365c58d"
+    },
+    {
+      "path": "lean/Div3Machine/Body8.lean",
+      "sha256": "4aabe4f65f28732133a61184e6b26d367f33507a8ffed3949b87543abfc024f8"
+    },
+    {
+      "path": "lean/Div3Machine/Body32.lean",
+      "sha256": "98c41542eb17f5deb2527eb26a971ce4bb43fafd0457cfe03350588b072b5ddc"
+    },
+    {
+      "path": "lean/Div3Machine/Body1.lean",
+      "sha256": "6a3e32309e87c0389660a2a89737a17ba57b3b5ba5be17e067edf3d2cabc963e"
+    },
+    {
+      "path": "lean/Div3Machine/Loops.lean",
+      "sha256": "d0745386e8ae7d1c7a212b4bd5b8bf2e077a66399deb40c6eb7ff9342afd8f8f"
+    },
+    {
+      "path": "lean/Div3Machine/Phases.lean",
+      "sha256": "8ad973cabcbbe8c7fc17b790f899c067b8f7a168bafcaa461e65ee7dc92c9a67"
+    },
+    {
+      "path": "lean/Div3Machine/Main.lean",
+      "sha256": "a93da56ec0e6ccdee64b1cf3fe717399e132ff97263a2f5ca7a8102cec9806d3"
+    },
+    {
+      "path": "lean/Div3Machine/Audit.lean",
+      "sha256": "fb62989cdd7b25fc7e450659346d286da3930fd3ee1ba198fdd92403f0c467cd"
     }
   ],
-  "combined_sha256": "13cdbf158853f05bf2fe9f914170f5f93a3b7b2dc4b97da889120c4ff1d110d0",
+  "combined_sha256": "943a62869909e3c1c09f29457d38165b5148a3dce653127efd2a0b796d8f0935",
   "accepted": true,
   "lean_exit_code": 0,
-  "audited_declarations": 107,
+  "audited_declarations": 244,
   "parser_negative_controls": 9,
   "real_lean_negative_controls": [
     "admitted",
     "added_axiom"
   ],
-  "seconds": 197.8357934000087,
+  "seconds": 131.05332459999954,
   "mode": "explicit Lean and installed Mathlib cache"
 }

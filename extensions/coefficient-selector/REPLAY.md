@@ -12,9 +12,9 @@ cd ..
 python replay.py
 ```
 
-The ordinary build checks module imports. The fresh-source replay concatenates all 27 sources in preserved namespace/section order, imports only Mathlib, and checks all declarations without importing a cached project theorem. Its source, output, and hashes are written to `results/`. The original development used the installed Mathlib cache and direct Lean invocation; the Lake commands provide portable installation. No exported guarantee may depend on `sorryAx`, native evaluation, or an added axiom.
+The ordinary build checks module imports. The fresh-source replay concatenates all 54 sources in preserved namespace/section order, imports only Mathlib, and checks all declarations without importing a cached project theorem. Its source, output, and hashes are written to `results/`. Development used the installed Mathlib cache and direct Lean invocation; the Lake commands provide portable installation. No exported guarantee may depend on `sorryAx`, native evaluation, or an added axiom.
 
-Replay now requires all 107 expected axiom reports and rejects missing/duplicate reports, unapproved dependencies, proof holes, and native-decision tokens. It runs real Lean negative controls: an admitted proof and a proof using a new axiom both compile successfully, but must fail the acceptance policy. Nine additional parser/source-policy controls check rejection behavior. This is a build acceptance policy, not a defense against a malicious Lean metaprogram or a substitute for reviewing theorem statements.
+Replay now requires all 244 expected axiom reports and rejects missing/duplicate reports, unapproved dependencies, proof holes, and native-decision tokens. It runs real Lean negative controls: an admitted proof and a proof using a new axiom both compile successfully, but must fail the acceptance policy. Nine additional parser/source-policy controls check rejection behavior. This is a build acceptance policy, not a defense against a malicious Lean metaprogram or a substitute for reviewing theorem statements.
 
 For offline replay against an explicitly installed Mathlib cache, use `python replay.py --lean /path/to/lean --lean-path-file /path/to/mathlib-paths.txt`. The file contains the platform-separated Mathlib/dependency import paths. The recorded assessment used this mode and Lean 4.32.1; a new dependency installation was not tested.
 
@@ -51,4 +51,38 @@ The short run includes 1,048,576 pseudorandom words plus boundary/layout checks.
 
 This publication includes aggregate validation and the complete aggregate timing table. Raw trial records, local source identities, and development failure logs remain in the separate local evidence package. Fresh commands write new raw records here. The initial counter-reporting error was corrected and the exhaustive run repeated; failing Lean builds were rejected before final replay. The unguarded numerical failure remains a checked theorem and test case.
 
-Verify shipped file hashes with `python verify_manifest.py`. The proof is of the specified value/bit/control-flow model, not C compilation or pointer safety. See [CONTRACT.md](CONTRACT.md).
+## Fixed compiled image
+
+After both `lake build` and the fresh-source replay pass, run the separate
+machine-image gate. The recorded build uses Windows x86-64, Clang 19.1.5,
+AVX2/FMA, and COFF objects:
+
+```sh
+cd lean
+lake env python ../machine_acceptance.py --softfloat-archive /path/to/SoftFloat-3e.zip --exhaustive
+```
+
+Omit `--exhaustive` for the short sweep. For an offline direct Lean invocation,
+pass `--lean /path/to/lean --lean-path-file /path/to/project-and-mathlib-paths.txt`;
+this file must include the freshly built Div3Machine and all dependency paths.
+The recorded replay used this mode. The ordinary source replay needs only
+Mathlib paths, as described above.
+
+This gate compiles `native/certified_div3.c`, extracts its code/constants,
+checks exact byte equality in Lean, audits the machine theorem dependencies,
+rejects five mutated images, assembles/links the accepted image, and checks
+all loaded bytes before native testing. Different compiler output fails
+closed. It does not silently regenerate a proof for an altered program.
+Native commands, binaries, and raw logs stay in `machine_work/`; the portable
+record is `results/machine_acceptance.json`. The checked object in that run
+is `checked.obj`, with the ABI declared in `native/certified_div3.h`.
+
+The 532-byte image hash is fixed in [MACHINE_PROOF.md](MACHINE_PROOF.md).
+Consumers must link that accepted object and preserve its image/ABI/environment
+contract. Arbitrary inline compilation does not acquire this guarantee.
+No timing result for the dedicated compiled entry point is claimed.
+
+Verify shipped file hashes with `python verify_manifest.py`. The machine
+proof establishes values, termination, memory bounds/framing, and return
+behavior relative to the explicit ISA/primitive specifications and caller
+preconditions. See [CONTRACT.md](CONTRACT.md) for the remaining boundaries.

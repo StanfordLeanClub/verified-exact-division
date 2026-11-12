@@ -1,5 +1,5 @@
 name = "certified_coefficients"
-defaultTargets = ["Selector", "Div3IEEE"]
+defaultTargets = ["Selector", "Div3IEEE", "Div3Machine"]
 
 [[require]]
 name = "mathlib"
@@ -14,3 +14,6 @@ name = "Selector"
 
 [[lean_lib]]
 name = "Div3IEEE"
+
+[[lean_lib]]
+name = "Div3Machine"

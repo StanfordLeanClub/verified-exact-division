@@ -1,6 +1,8 @@
 # Assessment of the coefficient-selector PR
 
-Assessed revision: `2aa0bbd8941405369495f24bad913ca6037ed09c`, PR #1, against base `482d8cdad10f23ef778e3c938b1b43ceac06809c`. The additions described below leave the numerical implementation and all Lean theorem sources unchanged.
+The original assessment below is historical: revision `2aa0bbd8941405369495f24bad913ca6037ed09c`, PR #1, against base `482d8cdad10f23ef778e3c938b1b43ceac06809c`. That assessment added acceptance checks without changing the numerical implementation or theorem sources.
+
+The subsequent machine-proof work starts from PR head `509f271c17784f7ed7094ce21856afb14c46dd9a`. It addresses the most consequential remaining gap for one fixed compiled `/3` image: `machine_correct` proves termination, the 32/8/scalar execution, byte-level memory bounds/framing, in-place safety, and return/register behavior. A kernel-checked byte decoder and exact-image gate connect that theorem to a separately linked entry point. See [MACHINE_PROOF.md](MACHINE_PROOF.md) for the current evidence and trust boundary. The inline header, frozen dependencies, and earlier benchmarks remain unchanged. The statements below about an absent universal memory/compiled-code proof describe the earlier revision and are superseded only for this checked image.
 
 ## Decision
 

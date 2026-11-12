@@ -25,7 +25,8 @@ def main():
     sources=[]
     for ns,mods in [('ExactFDiv','Basic Main General Bounded IEEE Setup Final Exists RNE Checker Algorithm Audit'),
                     ('Selector','Stability Candidates Checker Scaling Instances Audit'),
-                    ('Div3IEEE','Bridge Core Encoding Guard Array Tight Flags Cases Audit')]:
+                    ('Div3IEEE','Bridge Core Encoding Guard Array Tight Flags Cases Audit'),
+                    ('Div3Machine','Memory Operations Invariant ISA Decoder Program Linear Arithmetic Blocks Support Vector8 Vector32 Stores ChunkMemory Scalar Image Control Contract Counters Body8Kernel Body8 Body32 Body1 Loops Phases Main Audit')]:
         sources += [root/'lean'/ns/(m+'.lean') for m in mods.split()]
     imports=[]; bodies=[]; records=[]; expected=[]
     for p in sources:
@@ -38,11 +39,11 @@ def main():
             if line.startswith('import '):
                 if line.startswith('import Mathlib.'):
                     if line not in imports: imports.append(line)
-                elif not re.match(r'import (ExactFDiv|Selector|Div3IEEE)\.',line):
+                elif not re.match(r'import (ExactFDiv|Selector|Div3IEEE|Div3Machine)\.',line):
                     raise ValueError('Unexpected import: '+line)
             else: body.append(line)
         bodies.append('\n/- Source: '+p.relative_to(root).as_posix()+' -/\nsection\n'+'\n'.join(body)+'\nend\n')
-    if len(expected)!=107 or len(set(expected))!=107:
+    if len(expected)!=244 or len(set(expected))!=244:
         raise ValueError('Published audit inventory changed; review policy and inventory explicitly')
     stamp=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S')
     out=root/'results'; out.mkdir(exist_ok=True)
