@@ -1,0 +1,123 @@
+{
+  "sources": [
+    {
+      "path": "lean/ExactFDiv/Basic.lean",
+      "sha256": "f2f979d51d0325dab8b29a511d5bd0afa30cfd292ba986dcd8d78bfd298fedab"
+    },
+    {
+      "path": "lean/ExactFDiv/Main.lean",
+      "sha256": "1542e8a82a9eb7aa538c325234d2cd60219c15d452d39bca09b0676a0a7153a1"
+    },
+    {
+      "path": "lean/ExactFDiv/General.lean",
+      "sha256": "4f18f88248068875ccbd3cfda01c8d2ff47759c04d38f7856020c649f4d6d4fd"
+    },
+    {
+      "path": "lean/ExactFDiv/Bounded.lean",
+      "sha256": "a07fa4a1585175fa2297ce39fc1bda4fac34ec330b1be593edb37aa1f320fd17"
+    },
+    {
+      "path": "lean/ExactFDiv/IEEE.lean",
+      "sha256": "802a3fb0e5c344c5efd71117c92346aa7ad88aa819110c7c4dbefddfb99d53c7"
+    },
+    {
+      "path": "lean/ExactFDiv/Setup.lean",
+      "sha256": "06117da20f36a56efdd2fa139e66101f92bcf3a31dda6f0bb68ce3c6649b2200"
+    },
+    {
+      "path": "lean/ExactFDiv/Final.lean",
+      "sha256": "d42c06819bcd15aeae1e250722d8053b2eab129396ea833ff3866f77d38c8e20"
+    },
+    {
+      "path": "lean/ExactFDiv/Exists.lean",
+      "sha256": "7dc0dfbc5f496cce2e7c01c0ed9af51a84a6262c1b820bbb43277bf5107c71df"
+    },
+    {
+      "path": "lean/ExactFDiv/RNE.lean",
+      "sha256": "943b3ee665614e2d16934ec7c0e94f745a5eca5a54b1d813f5ea1da377d79887"
+    },
+    {
+      "path": "lean/ExactFDiv/Checker.lean",
+      "sha256": "ed5e5c97aaa8fc045fcc565aed1af00b5855b432eccc1a463c75db1f34b409d1"
+    },
+    {
+      "path": "lean/ExactFDiv/Algorithm.lean",
+      "sha256": "eaae75a8e9cc9dd320c57faf348a53cf6314df674684a1564ae800a29f448d72"
+    },
+    {
+      "path": "lean/ExactFDiv/Audit.lean",
+      "sha256": "4c08798993af74cdfdb8214cbd59131c36b0446d057c89f7368b75309dd6376b"
+    },
+    {
+      "path": "lean/Selector/Stability.lean",
+      "sha256": "5f1903cc31bc87439432125fd8ab5da84d16089724f85b39dfbaf391d28212c5"
+    },
+    {
+      "path": "lean/Selector/Candidates.lean",
+      "sha256": "e60bca29da1f1852f630285a390f4794528088e6a059442f8fb7e6e6068b7ffc"
+    },
+    {
+      "path": "lean/Selector/Checker.lean",
+      "sha256": "a6648e9d8f30f930bde1e90f02b015e760f3b09e381f9cbc9ebf77e67bdb1039"
+    },
+    {
+      "path": "lean/Selector/Scaling.lean",
+      "sha256": "e14099ee2d13a66ba853814f8de04146e11fc87cb5e0ae9ce662b7fd9a3c45ec"
+    },
+    {
+      "path": "lean/Selector/Instances.lean",
+      "sha256": "e92b77df6635782e926a60fed7dbecca549e3c0a1e3ec3023ba209c41cf1a562"
+    },
+    {
+      "path": "lean/Selector/Audit.lean",
+      "sha256": "c12ea35b6c7c9c41d5be9eb48716732068d5a054b048de318b3b91bc88c8f467"
+    },
+    {
+      "path": "lean/Div3IEEE/Bridge.lean",
+      "sha256": "26300408a6ac7e72f07b9198ecbd21334ee030292e3257b290da1d9a30d8fe23"
+    },
+    {
+      "path": "lean/Div3IEEE/Core.lean",
+      "sha256": "a0c5be14913ca643bc5d460431d749a3a2b0d774d869ddbd309289c533a906a7"
+    },
+    {
+      "path": "lean/Div3IEEE/Encoding.lean",
+      "sha256": "a5ec5d08beaa59aed400b1a6a1f17756f32e17c428144cd5ff47a4a26ef98db0"
+    },
+    {
+      "path": "lean/Div3IEEE/Guard.lean",
+      "sha256": "44903be43a2b4a5393bbc0f3156d37bde8321e5fc7e790be2481f399a19c60bf"
+    },
+    {
+      "path": "lean/Div3IEEE/Array.lean",
+      "sha256": "73e2932adc50be6889a95a268fb8800869ed981e43b48a98155dedebfd2a6209"
+    },
+    {
+      "path": "lean/Div3IEEE/Tight.lean",
+      "sha256": "1726cd02814cdd116d319c34aa179b4a980782f42a593417b12f6da11878701d"
+    },
+    {
+      "path": "lean/Div3IEEE/Flags.lean",
+      "sha256": "4ae26a1fdf6058ab5ac34b2ce22f4032b71dbe03af8cb72dae02b0ea2391be20"
+    },
+    {
+      "path": "lean/Div3IEEE/Cases.lean",
+      "sha256": "597ddf1ce1a6f263f5dddcaed11f00038595c4ae8d11ef170db059f08830fca5"
+    },
+    {
+      "path": "lean/Div3IEEE/Audit.lean",
+      "sha256": "d0a1c1689d654f953408a95cb02f7a203e5904e19140ace850afa1de961ee5ac"
+    }
+  ],
+  "combined_sha256": "13cdbf158853f05bf2fe9f914170f5f93a3b7b2dc4b97da889120c4ff1d110d0",
+  "accepted": true,
+  "lean_exit_code": 0,
+  "audited_declarations": 107,
+  "parser_negative_controls": 9,
+  "real_lean_negative_controls": [
+    "admitted",
+    "added_axiom"
+  ],
+  "seconds": 197.8357934000087,
+  "mode": "explicit Lean and installed Mathlib cache"
+}

@@ -2,6 +2,8 @@
 
 This work extends the certified coefficient selector to binary32 decoding, IEEE value rounding, exact wrapping guard bits, SIMD mask reduction, and the 32/8/scalar array loop. It is isolated from Claude's active work. The repository contribution belongs under `extensions/coefficient-selector/`, on a separate branch.
 
+The subsequent [expert assessment](ASSESSMENT.md) leaves the algorithm and theorem sources unchanged and adds independent acceptance checks. Berkeley SoftFloat agrees with the actual compiled header for every binary32 encoding through both scalar and SIMD execution: 12,886,335,424 comparisons including hardware-reference and finite layout checks, zero mismatches. All five executable fault variants are rejected. The source replay now enforces the axiom policy; all 107 declarations pass, and real admitted-proof/added-axiom controls are rejected. Records are in `results/acceptance.json` and `results/proof_acceptance.json`. These additions strengthen implementation evidence without claiming a compiled-code proof or new speedup.
+
 ## Proof statements
 
 All 27 source modules replayed successfully from source using only the installed Mathlib dependencies. The 107 audited declarations (46 in this extension's audit) use only `propext`, `Classical.choice`, and `Quot.sound`, or no axioms. No exported guarantee relies on a proof hole, an added axiom, or native decision. The full source replay and development failures are retained locally. The clean extension audit and aggregate validation are published under `results/`; replay commands regenerate the proof check.
