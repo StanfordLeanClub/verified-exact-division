@@ -1,0 +1,50 @@
+{
+  "accepted": true,
+  "compiler": "clang version 19.1.5",
+  "image_sha256": "a08a38145390d6ebe4fcc924149887c3fe12e560f50776482570f2149cfe6940",
+  "image_bytes": 532,
+  "loaded_image_checked": true,
+  "byte_negative_controls": [
+    "opcode",
+    "branch_target",
+    "load_opcode",
+    "store_opcode",
+    "constant"
+  ],
+  "softfloat_archive_sha256": "21130ce885d35c1fe73fc1e1bf2244178167e05c6747cad5f450cc991714c746",
+  "softfloat_url": "https://www.jhauser.us/arithmetic/SoftFloat-3e.zip",
+  "records": [
+    {
+      "type": "flags",
+      "input": "40400000",
+      "result": "3f800000",
+      "softfloat": 0,
+      "hardware": 0,
+      "optimized": 32
+    },
+    {
+      "type": "result",
+      "mode": "exhaustive",
+      "sweep_inputs": 4294967296,
+      "value_comparisons": 12886335424,
+      "oracle_calls": 4295685161,
+      "array_calls": 4296056848,
+      "guard_page_calls": 4544,
+      "mismatches": 0,
+      "nan_comparison": "class"
+    }
+  ],
+  "test_seconds": 173.51533640000162,
+  "binary_sha256": "2c4f892e23f26bb7b06b7be8c451653b3581e320b625caf204b44717d29e888a",
+  "source_sha256": {
+    "machine_acceptance.py": "f8eb7a9940cef515b01e5d257d4e052ddb14b44b0243ba7d15f259e0ac07ef1d",
+    "native/certified_div3.c": "e6d6c3160322baff3aae7846c36b0e8b4d9dd147907f262b687e8e690a844fa9",
+    "native/div3_tight.h": "556fa5176812f708e560ddfd9b9105d60514f7defb22906341ee0b1e7af1dc64",
+    "tools/extract_machine.py": "6f70a7ab8545594b004de4e291cb65d2121066e9d3a612567490c64788378907",
+    "lean/Div3Machine/Main.lean": "a93da56ec0e6ccdee64b1cf3fe717399e132ff97263a2f5ca7a8102cec9806d3",
+    "lean/Div3Machine/Operations.lean": "f117d0cec97d3117550144693b37564e96932b907e6eec9ed6d6e8a2704cdbf6",
+    "lean/Div3Machine/ISA.lean": "17b3865c35dc14b973803026fa7a68969e8ec271bde8b4de32c114c5cb46a7b0",
+    "lean/Div3Machine/Decoder.lean": "29c290124117c49b539d6097e2d7065fa16b9d2076cb91031c3902def150cd70",
+    "lean/Div3Machine/Program.lean": "8e13663fa5bac077c02f71c716a9b6f56165ff35cd5eba1c5ce3e01832d7f447"
+  }
+}

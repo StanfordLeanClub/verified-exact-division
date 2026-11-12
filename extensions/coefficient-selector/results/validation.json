@@ -1,0 +1,24 @@
+{
+  "source_modules_replayed": 27,
+  "audited_declarations": 107,
+  "extension_audit_declarations": 46,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "source_replay_exit_code": 0,
+  "native_exhaustive": {
+    "encodings": 4294967296,
+    "variants": 5,
+    "comparisons": 21475308630,
+    "mismatches": 0
+  },
+  "flag_witness": {
+    "input_bits": "40400000",
+    "result_bits": "3f800000",
+    "division_flags": 0,
+    "optimized_flags": 32
+  },
+  "raw_evidence": "Retained locally; replay commands regenerate it."
+}

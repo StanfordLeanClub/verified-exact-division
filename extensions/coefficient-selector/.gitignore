@@ -1,0 +1,10 @@
+.lake/
+*.olean
+*.ilean
+*.exe
+compiler_tmp/
+__pycache__/
+acceptance_work/
+machine_work/
+results/Negative_*
+results/Replay_*

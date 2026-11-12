@@ -1,0 +1,94 @@
+{
+  "source_revision_assessed": "2aa0bbd8941405369495f24bad913ca6037ed09c",
+  "softfloat_url": "https://www.jhauser.us/arithmetic/SoftFloat-3e.zip",
+  "softfloat_archive_sha256": "21130ce885d35c1fe73fc1e1bf2244178167e05c6747cad5f450cc991714c746",
+  "compiler": "clang version 19.1.5",
+  "source_sha256": {
+    "acceptance.py": "717855c9fac65559c6aa70e29f4ed8b8803cd2057b76b755d44ea6acc250b557",
+    "native/acceptance.c": "0ac41947b114c49874bd5623b82b8ddbdc206c6b7006ff347b3295cb17de80e1",
+    "native/acceptance_sut.c": "4810e2e4dd25ccde3f70194851466d697a54a18e3a97aaaf63450f5e8217cf52",
+    "native/div3_tight.h": "556fa5176812f708e560ddfd9b9105d60514f7defb22906341ee0b1e7af1dc64"
+  },
+  "assembly_checks": {
+    "sut_vector_fma": true,
+    "sut_vector_multiply": true,
+    "sut_vector_divide": true,
+    "hardware_vector_divide": true
+  },
+  "results": [
+    {
+      "variant": "actual",
+      "exit_code": 0,
+      "seconds": 215.85893190000206,
+      "binary_sha256": "9151908d932b7645a0ac9378d6ad555402b26b46cb8eba5531e2765056d36f50",
+      "object_sha256": "d510af838199d15628ccfa6d47208621c33c6a7d5c4499c339eeac0f5c99e762",
+      "header_sha256": "556fa5176812f708e560ddfd9b9105d60514f7defb22906341ee0b1e7af1dc64",
+      "records": [
+        {
+          "type": "flags",
+          "input": "40400000",
+          "result": "3f800000",
+          "softfloat": 0,
+          "hardware": 0,
+          "optimized": 32
+        },
+        {
+          "type": "result",
+          "mode": "exhaustive",
+          "sweep_inputs": 4294967296,
+          "value_comparisons": 12886335424,
+          "oracle_calls": 4295685161,
+          "array_calls": 4296056848,
+          "guard_page_calls": 4544,
+          "mismatches": 0,
+          "nan_comparison": "class"
+        }
+      ]
+    },
+    {
+      "variant": "no_guard",
+      "exit_code": 2,
+      "seconds": 0.1459102999942843,
+      "binary_sha256": "106ec5e92af003eb51b875bb6467919274b22e05d48990d499eda6715c6f6280",
+      "object_sha256": "a953f49fbf0fa6fecb80787b217ee1ce682d1faa6d8c8ba26e60c1b89970d901",
+      "header_sha256": "d8a10377612cf55d21cfc8029568e1eb16d6725fca65586024438cc93afa8b70",
+      "witness": "FAIL disjoint input=00800000 got=002aaaaa expected=002aaaab"
+    },
+    {
+      "variant": "wrong_high_coefficient",
+      "exit_code": 2,
+      "seconds": 0.19056420000561047,
+      "binary_sha256": "2adc71c3b66b738be12741d4f44991e930b2f288cefbf3f82ac47ee933ee4d1a",
+      "object_sha256": "e14b89b8ffad8123b062a58444d3c86d8d0bfa3b2c3588ccc781f0670e2ea966",
+      "header_sha256": "00ecdbb4561fa4ec83da8c1519095ea932fa20db96ea34b771160f8e3029de5f",
+      "witness": "FAIL disjoint input=0d400000 got=0c800001 expected=0c800000"
+    },
+    {
+      "variant": "only_lane_zero",
+      "exit_code": 2,
+      "seconds": 0.19315629999618977,
+      "binary_sha256": "55509c8f203ef57b67e9cba77f89ed8e4f2768d533a0312c9cf423de14458037",
+      "object_sha256": "d66b66abec333112d8a7131e27ce2fa5bafd00c651180ccecaac031b52cf52d9",
+      "header_sha256": "8ca3e2466beaae64d805791ac9510ecd1e38992af1dac759d05ae5354b6dea14",
+      "witness": "FAIL disjoint input=00800000 got=002aaaaa expected=002aaaab"
+    },
+    {
+      "variant": "unfused",
+      "exit_code": 2,
+      "seconds": 0.3653196000086609,
+      "binary_sha256": "1291702e7848e455b6e83e1f8a832ce7073244cb0bcaf183952505fa008d7116",
+      "object_sha256": "8f91e4c1a4bbe177d079e3d1339469027515734c4d7f1433dbd8cc2b94eb046c",
+      "header_sha256": "7ae8ba6baedc89ce76264ca88be5ced3b15e8c11856de4b97710574fdfba24a1",
+      "witness": "FAIL scalar/SoftFloat input=aedb5108 got=ae123606 expected=ae123605"
+    },
+    {
+      "variant": "overstore",
+      "exit_code": 2,
+      "seconds": 0.17136500000196975,
+      "binary_sha256": "9b2b73395bf2956dc64ed5f9226a01687ea061021f1b8a2145d20b0cf01e08ce",
+      "object_sha256": "c390833563f7a9a025782fd52431b4f58307891adfef92c875ab0fe46b296836",
+      "header_sha256": "556fa5176812f708e560ddfd9b9105d60514f7defb22906341ee0b1e7af1dc64",
+      "witness": "FAIL: array canary"
+    }
+  ]
+}
